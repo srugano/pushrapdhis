@@ -1,0 +1,30 @@
+{% extends "base.html" %}
+{% load static %}
+{% block content %}
+<p><a class="btn btn-default" href="{% url 'rapdhis_sitemapping_list' %}">SiteMapping Listing</a></p>
+<table class="table">
+<tr>
+<td>ID</td><td>Link</td>
+    <td>dhisorgname</td>
+    <td>dhisorguid</td>
+    <td>dhisorgparent</td>
+    <td>rproorgname</td>
+    <td>rproorgid</td>
+    <td>rproorgparent</td>
+    <td>commune</td>
+</tr>
+{% for object in object_list %}
+<tr>
+    <td>{{object.pk}}</td>
+    <td><a href="{{object.get_absolute_url}}">{{object}}</a></td>
+    <td>{{ object.dhisorgname }}</td>
+    <td>{{ object.dhisorguid }}</td>
+    <td>{{ object.dhisorgparent }}</td>
+    <td>{{ object.rproorgname }}</td>
+    <td>{{ object.rproorgid }}</td>
+    <td>{{ object.rproorgparent }}</td>
+    <td>{{ object.commune }}</td>
+</tr>
+{% endfor %}
+</table><a class="btn btn-primary" href="{% url 'rapdhis_sitemapping_create' %}">Create new SiteMapping</a>
+{% endblock %}

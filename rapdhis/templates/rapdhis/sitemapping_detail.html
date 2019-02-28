@@ -1,0 +1,16 @@
+{% extends "base.html" %}
+{% load static %}
+{% block content %}
+<p><a class="btn btn-default" href="{% url 'rapdhis_sitemapping_list' %}">SiteMapping Listing</a></p>
+<table class="table">
+<tr><td>dhisorgname</td><td>{{ object.dhisorgname }}</td></tr>
+<tr><td>dhisorguid</td><td>{{ object.dhisorguid }}</td></tr>
+<tr><td>dhisorgparent</td><td>{{ object.dhisorgparent }}</td></tr>
+<tr><td>rproorgname</td><td>{{ object.rproorgname }}</td></tr>
+<tr><td>rproorgid</td><td>{{ object.rproorgid }}</td></tr>
+<tr><td>rproorgparent</td><td>{{ object.rproorgparent }}</td></tr>
+<tr><td>commune</td><td>{{ object.commune }}</td></tr>
+</table>
+<a class="btn btn-primary" href="{{object.get_update_url}}">Edit SiteMapping</a>
+
+{% endblock %}
