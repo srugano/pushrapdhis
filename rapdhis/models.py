@@ -12,6 +12,28 @@ from django_extensions.db import fields as extension_fields
 import uuid
 
 
+
+class Indicator(models.Model):
+    displayName = models.CharField(max_length=255)
+    code = models.CharField(max_length=255, unique=True, default=uuid.uuid4)
+
+
+class OrganisationUnit(models.Model):
+    displayName = models.CharField(max_length=255)
+    code = models.CharField(max_length=255, unique=True, default=uuid.uuid4)
+
+
+class DataElement(models.Model):
+    displayName = models.CharField(max_length=255)
+    code = models.CharField(max_length=255, unique=True, default=uuid.uuid4)
+
+
+class DataSets(models.Model):
+    displayName = models.CharField(max_length=255)
+    code = models.CharField(max_length=255, unique=True, default=uuid.uuid4)
+
+
+
 class SiteMapping(models.Model):
 
     # Fields
