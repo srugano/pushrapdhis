@@ -7,24 +7,29 @@ class Migration(migrations.Migration):
 
     initial = True
 
-    dependencies = [
-    ]
+    dependencies = []
 
     operations = [
         migrations.CreateModel(
-            name='SiteMapping',
+            name="SiteMapping",
             fields=[
-                ('id', models.AutoField(auto_created=True, primary_key=True, serialize=False, verbose_name='ID')),
-                ('dhisorgname', models.CharField(max_length=255)),
-                ('dhisorguid', models.UUIDField()),
-                ('dhisorgparent', models.CharField(max_length=255)),
-                ('rproorgname', models.CharField(max_length=255)),
-                ('rproorgid', models.UUIDField()),
-                ('rproorgparent', models.CharField(max_length=255)),
-                ('commune', models.CharField(max_length=255)),
+                (
+                    "id",
+                    models.AutoField(
+                        auto_created=True,
+                        primary_key=True,
+                        serialize=False,
+                        verbose_name="ID",
+                    ),
+                ),
+                ("dhisorgname", models.CharField(max_length=255)),
+                ("dhisorguid", models.UUIDField()),
+                ("dhisorgparent", models.CharField(max_length=255)),
+                ("rproorgname", models.CharField(max_length=255)),
+                ("rproorgid", models.UUIDField()),
+                ("rproorgparent", models.CharField(max_length=255)),
+                ("commune", models.CharField(max_length=255)),
             ],
-            options={
-                'ordering': ('-pk',),
-            },
-        ),
+            options={"ordering": ("-pk",)},
+        )
     ]

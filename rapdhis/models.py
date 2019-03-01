@@ -12,7 +12,6 @@ from django_extensions.db import fields as extension_fields
 import uuid
 
 
-
 class Indicator(models.Model):
     displayName = models.CharField(max_length=255)
     code = models.CharField(max_length=255, unique=True, default=uuid.uuid4)
@@ -33,7 +32,6 @@ class DataSets(models.Model):
     code = models.CharField(max_length=255, unique=True, default=uuid.uuid4)
 
 
-
 class SiteMapping(models.Model):
 
     # Fields
@@ -45,18 +43,14 @@ class SiteMapping(models.Model):
     rproorgparent = models.CharField(max_length=255)
     commune = models.CharField(max_length=255)
 
-
     class Meta:
-        ordering = ('-pk',)
+        ordering = ("-pk",)
 
     def __unicode__(self):
-        return u'%s' % self.pk
+        return u"%s" % self.pk
 
     def get_absolute_url(self):
-        return reverse('rapdhis_sitemapping_detail', args=(self.pk,))
-
+        return reverse("rapdhis_sitemapping_detail", args=(self.pk,))
 
     def get_update_url(self):
-        return reverse('rapdhis_sitemapping_update', args=(self.pk,))
-
-
+        return reverse("rapdhis_sitemapping_update", args=(self.pk,))

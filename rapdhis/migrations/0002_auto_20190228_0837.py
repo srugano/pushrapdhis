@@ -6,19 +6,17 @@ import uuid
 
 class Migration(migrations.Migration):
 
-    dependencies = [
-        ('rapdhis', '0001_initial'),
-    ]
+    dependencies = [("rapdhis", "0001_initial")]
 
     operations = [
         migrations.AlterField(
-            model_name='sitemapping',
-            name='dhisorguid',
+            model_name="sitemapping",
+            name="dhisorguid",
             field=models.UUIDField(default=uuid.uuid4),
         ),
         migrations.AlterField(
-            model_name='sitemapping',
-            name='rproorgid',
+            model_name="sitemapping",
+            name="rproorgid",
             field=models.UUIDField(default=uuid.uuid4),
         ),
     ]

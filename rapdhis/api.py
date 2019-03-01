@@ -9,5 +9,3 @@ class SiteMappingViewSet(viewsets.ModelViewSet):
     queryset = models.SiteMapping.objects.all()
     serializer_class = serializers.SiteMappingSerializer
     permission_classes = [permissions.IsAuthenticated]
-
-

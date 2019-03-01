@@ -9,9 +9,7 @@ def ws_job_connect(message, group_id):
 
 # Connected to websocket.receive
 def ws_message(message, group_id):
-    Group(group_id).send({
-        "text": "%s" % message.content['text'],
-    })
+    Group(group_id).send({"text": "%s" % message.content["text"]})
 
 
 # Connected to websocket.disconnect

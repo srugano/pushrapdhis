@@ -42,19 +42,20 @@ def create_sitemapping(**kwargs):
 
 
 class SiteMappingViewTest(unittest.TestCase):
-    '''
+    """
     Tests for SiteMapping
-    '''
+    """
+
     def setUp(self):
         self.client = Client()
 
     def test_list_sitemapping(self):
-        url = reverse('rapdhis_sitemapping_list')
+        url = reverse("rapdhis_sitemapping_list")
         response = self.client.get(url)
         self.assertEqual(response.status_code, 200)
 
     def test_create_sitemapping(self):
-        url = reverse('rapdhis_sitemapping_create')
+        url = reverse("rapdhis_sitemapping_create")
         data = {
             "dhisorgname": "dhisorgname",
             "dhisorguid": "dhisorguid",
@@ -69,7 +70,7 @@ class SiteMappingViewTest(unittest.TestCase):
 
     def test_detail_sitemapping(self):
         sitemapping = create_sitemapping()
-        url = reverse('rapdhis_sitemapping_detail', args=[sitemapping.pk,])
+        url = reverse("rapdhis_sitemapping_detail", args=[sitemapping.pk])
         response = self.client.get(url)
         self.assertEqual(response.status_code, 200)
 
@@ -84,8 +85,6 @@ class SiteMappingViewTest(unittest.TestCase):
             "rproorgparent": "rproorgparent",
             "commune": "commune",
         }
-        url = reverse('rapdhis_sitemapping_update', args=[sitemapping.pk,])
+        url = reverse("rapdhis_sitemapping_update", args=[sitemapping.pk])
         response = self.client.post(url, data)
         self.assertEqual(response.status_code, 302)
-
-
