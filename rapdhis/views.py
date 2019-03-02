@@ -51,5 +51,5 @@ def process_request(request):
 
     r = api.post("dataValueSets", json=data)
     d["Ok"] = True
-    d["message"] = "Rapport bien recu. Vous pouvez voir les valeurs dans la province Bo, district Badjian pour l indicateur Deaths < 5 yrs, les valeurs Cholera, Dysentery, Malaria qui ont change ici http://dhis.uniceburundi.org"
+    d["message"] = "Rapport bien recu. Vous pouvez voir les valeurs dans la province Bo, district Badjia, le centre de sante Ngelehun CHC pour l indicateur Mortality < 5 yrs, les valeurs Cholera, Dysentery, Malaria qui ont change ici http://dhis.uniceburundi.org"
     return JsonResponse(d, safe=False)
