@@ -43,20 +43,20 @@ def process_request(request):
         "period": int(incoming_data[0]),
         "orgUnit": "DiszpKrYNg8",
         "dataValues": [
-            {"dataElement":"hM4ya5T2AqX", "value": int(incoming_data[1])},
-            {"dataElement":"Yy9NtNfwYZJ", "value": int(incoming_data[2])},
-            {"dataElement":"Vp12ncSU1Av", "value": int(incoming_data[3])},
-            {"dataElement":"NpJtsQkMTm3", "value": int(incoming_data[4])},
-            {"dataElement":"jVDAvs6kIAP", "value": int(incoming_data[5])},
             {"dataElement":"FTRrcoaog83", "value": int(incoming_data[6])},
+            {"dataElement":"LjNlMTl9Nq9", "value": int(incoming_data[11])},
+            {"dataElement":"eY5ehpbEsB7", "value": int(incoming_data[10])},
+            {"dataElement":"Ix2HsbDMLea", "value": int(incoming_data[14])},
+            {"dataElement":"NpJtsQkMTm3", "value": int(incoming_data[4])},
+            {"dataElement":"r6nrJANOqMw", "value": int(incoming_data[13])},
+            {"dataElement":"f7n9E0hX8qk", "value": int(incoming_data[12])},
             {"dataElement":"MSZuQ1mTsia", "value": int(incoming_data[7])},
             {"dataElement":"lXolhoWewYH", "value": int(incoming_data[8])},
-            {"dataElement":"USBq0VHSkZq", "value": int(incoming_data[9])},
-            {"dataElement":"eY5ehpbEsB7", "value": int(incoming_data[10])},
-            {"dataElement":"LjNlMTl9Nq9", "value": int(incoming_data[11])},
-            {"dataElement":"f7n9E0hX8qk", "value": int(incoming_data[12])},
-            {"dataElement":"r6nrJANOqMw", "value": int(incoming_data[13])},
-            {"dataElement":"Ix2HsbDMLea", "value": int(incoming_data[14])}
+            {"dataElement":"jVDAvs6kIAP", "value": int(incoming_data[5])},
+            {"dataElement":"Vp12ncSU1Av", "value": int(incoming_data[3])},
+            {"dataElement":"hM4ya5T2AqX", "value": int(incoming_data[1])},
+            {"dataElement":"Yy9NtNfwYZJ", "value": int(incoming_data[2])},
+            {"dataElement":"USBq0VHSkZq", "value": int(incoming_data[9])}
         ],
     }
 
